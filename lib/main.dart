@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_test/wrapper/wrapper.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'firebase  test'),
+      home: Wrapper(),
     );
   }
 }
