@@ -7,6 +7,7 @@ plugins {
 }
 
 android {
+    
     namespace = "com.example.firebase_test"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
@@ -21,14 +22,11 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.firebase_test"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        applicationId "com.example.firebase_test"
+        minSdkVersion 23 // Update this value to 23
+        targetSdkVersion flutter.targetSdkVersion
+        versionCode flutter.versionCode
+        versionName flutter.versionName
     }
 
     buildTypes {
@@ -43,6 +41,11 @@ android {
 flutter {
     source = "../.."
 }
-dependencies{
+dependencies {
     implementation platform('com.google.firebase:firebase-bom:33.2.0')
+    implementation 'com.google.firebase:firebase-auth' // Firebase Authentication
+    implementation 'com.google.firebase:firebase-firestore' // Firebase Firestore (if used)
+    implementation 'com.google.firebase:firebase-analytics' // Firebase Analytics (optional)
+    // Add other Firebase services you need
 }
+
